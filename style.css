@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width:100%;
+    /* background-color:rgb(168, 242, 217); */
+}
+.navs{
+    display: flex;
+    padding: 2% 7%;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(168, 242, 217);
+}
+.navs h1{
+    font-size: 30px;
+    text-shadow: 2px 2px 5px red;
+    font-weight: bolder;
+}
+.nav-links{
+   flex:1;
+   text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    text-decoration: none;
+    /* color:; */
+    font-size: 20px;
+}
+.nav-links ul li::after{
+   content: '';
+   width: 0%;
+   height: 2px;
+   background: #f44336;
+   display: block;
+   margin: auto;
+   transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+     width:100%;
+}
+
+.navs .button{
+    display: inline-block;
+    font-size: 14px;
+    width:140px;
+    border:0;
+    padding: 12px 10px;
+    outline: none;
+    color:#fff;
+    background: linear-gradient(to right, #fb5283,#ff3527);
+    border-radius: 6px;;
+    cursor: pointer;
+    transition: width 0.5s;
+}
+ .navs .button img{
+    width:30px;
+    display: none;
+}
+
+.navs .button:hover img{
+     display:block; 
+}
+.navs .button:hover{
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navs .fa{
+    display:none;
+}
+
+
+/* -----------> INNER PAGE MEDIA QUERY <------------ */
+
+
+@media (max-width : 700px ){
+    .navs h1{
+        font-size: 25px;
+        font-weight: bolder;
+    }
+
+    .nav-links{
+        position:absolute;
+        background: #f44336;
+        height: 30vh;
+        width:170px;
+        top:0;
+        right:-200px;
+        text-align: left;
+        z-index: 2;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .navs .fa{
+        display:block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul {
+        padding: 30px;
+    }
+}
+
+
+/* --------->  OUTER PAGE CSS  <--------- */
+.hide{
+    display:none;
+}
+
+
+.outer-containerhiddens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.9s;
+}
+
+.outer-container{
+    /* display: none; */
+    height: 100vh;
+    width: 100%;
+    
+    background-color:azure;
+    
+}
+
+.outerNav{
+    margin-top: 100px;
+    height: 430px;
+    width:400px;
+    padding: 0% 1%;
+    background-color:antiquewhite;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+}
+.outerNavDiv h3{
+    font-size: 18px;
+    padding: 7px 0px;
+}
+.outerNavDiv h4{
+    font-size: 18px;
+    padding: 5px 0px;
+}
+.outerNavDiv h5{
+    color: red;
+    padding-bottom: 2px;
+}
+.outerNavDiv .outerNavTopic{
+    width: 100%;
+    padding:5px 5px ;
+}
+.outerNavDiv .outerNavDes{
+    width: 100%;
+    height: 170px;
+    padding:5px 5px ;
+}
+.outerNav .savebtnsDiv{
+    text-align: center;
+}
+.outerNav .savebtns{
+    font-size: 14px;
+    width:140px;
+    border:0;
+    padding: 12px 10px;
+    outline: none;
+    color:#fff;
+    background: linear-gradient(to right, #fb5283,#ff3527);
+    border-radius: 6px;;
+    cursor: pointer;
+    
+}
+.outerNav .closeicons{
+   flex: 1;
+   text-align: right;
+}
+.outerNav .fa{
+    color: black;
+    font-size: 40px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.outerNav .fa:hover{
+    /* transition: 0.5s; */
+    color:#ff3527
+}
+
+
+/*  ------------------ Edit Todo Style ---------------------- */
+
+.outereditNav{
+    margin-top: -20px;
+    margin-bottom: 10px;
+    margin-left: 500px;
+    height: 300px;
+    width:300px;
+    padding: 1% 1%;
+    background-color:skyblue;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+}
+
+.outerNavEditDiv .outereditNavTopic{
+    width: 100%;
+    padding:5px 5px ;
+
+}
+
+.outerNavEditDiv .outereditNavDes{
+    margin-top: 5px;
+    width: 100%;
+    height: 170px;
+    padding:5px 5px ;
+}
+.outereditNav .saveEditbtnsDiv{
+    text-align: center;
+}
+.outereditNav .saveEditbtns{
+    font-size: 14px;
+    width:140px;
+    border:0;
+    padding: 12px 10px;
+    outline: none;
+    color:#fff;
+    background: linear-gradient(to right, #fb5283,#ff3527);
+    border-radius: 6px;;
+    cursor: pointer;
+    
+}
+
+
+/* ------  Main Todo Style    --------- */
+
+.HeadingH1todo{
+    padding: 1% 2%;
+    
+}
+.HeadingH1todo h2{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 800;
+    color:#ff3527;
+}
+
+
+.mainBoxTodoContainer{
+    padding: 2% 2%;
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+.mainTodoContainer{
+    width:300px;
+    background-color:skyblue;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    margin: 10px;
+}
+.todoCotnainerNav{
+    padding: 2% 3%;
+}
+.todoCotnainerNav .todoHeaderButton{
+    flex:1;
+    text-align: right;
+    justify-content: space-between;
+    background-color:lightgrey;
+}
+.todoHeaderButton .fa{
+    color:black;
+    font-size: 30px;
+    padding: 5px;
+    cursor: pointer;
+}
+.todoCotnainerNav .todotopicmain{
+    width: 100%;
+    padding: 5px 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.todoCotnainerNav .todoDesmain{
+    width: 100%;
+    padding:5px 5px ;
+    background-color: #fff;
+}
+

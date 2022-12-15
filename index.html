@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYTO-DOS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!--    OuterDiv Start    -->
+
+    <div class="outer-container hide" id="outerContainerid">
+        <div class="outer-containerhiddens">
+            <nav class="outerNav">
+                <div class="closeicons" id="fafaOutercloseIcon">
+                    <i class="fa fa-times"></i>
+                </div>
+                <div class="outerNavDiv">
+                    <h3>Topic :</h3>
+                    <h5 class="hide" id="errorTopic">Topic can not be empty</h5>
+                    <input type="text" placeholder="Heading" class="outerNavTopic" id="outerTopicId">
+
+                    <h4>Description :</h4>
+                    <h5 class="hide" id="errorDes">Description can not be empty</h5>
+                    <textarea placeholder="Description" class="outerNavDes" id="outerDescriptId"></textarea>
+                </div>
+                <div class="savebtnsDiv">
+                    <button type="button" class="savebtns" id="outerSaveBtn">SAVE</button>
+                </div>
+            </nav>
+        </div>
+    </div>
+   
+
+    <!-- --    OuterDiv End     ---->
+
+    <div class="container" id="innerContainerId">
+        <nav class="navs">
+            <h1>MYTO-DOS</h1>
+            <div class="nav-links">
+                <i class="fa fa-times"></i>
+                <ul>
+                    <li><a href="">LOGIN</a></li>
+                    <li><a href="">ABOUT</a></li>
+                </ul>
+            </div>
+            <button type="button" class="button" id="addtodoId">Add TODO <img src="images/arrow.png"></button>
+            <i class="fa fa-bars"></i>
+        </nav>
+
+        <div class="HeadingH1todo">
+            <h2 class="HeadingH1todohead"><a href="">YOUR TODOS IS HERE</a></h2>
+        </div>
+        <div class="mainBoxTodoContainer" id="mainBoxTodoContainerId">
+        </div>
+
+
+        <div class="outer-containerhiddensedit hide" id="editDivContOpen">
+            <nav class="outereditNav ">
+                <div class="outerNavEditDiv">
+                    <input type="text" placeholder="Heading" class="outereditNavTopic" id="outereditTopicId">
+                    <textarea placeholder="Description" class="outereditNavDes" id="outereditDescriptId"></textarea>
+                </div>
+                <div class="saveEditbtnsDiv">
+                    <button type="button" class="saveEditbtns" id="editSaveBtn">SAVE</button>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
